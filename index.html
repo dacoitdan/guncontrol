@@ -17,30 +17,34 @@
 	                    <div id="content" role="main">
 	                    	<h2>INTRODUCTION</h2>
 	                        <p>
-								One of the most interesting aspects of social networks that organize chronologically like Twitter is the ability to examine trends. If a Twitter campaign becomes successful, the marketers behind it can perform a post-hoc analysis to determine the life cycle of their viral topic. 
+								One of the most interesting aspects of social networks that organize chronologically like Twitter is the ability to examine trends. With a simple search of a keyword or a hashtag, you can immediately take a look at the conversation around that topic. Since the last election cycle in the United States, Twitter has been in the public eye as a result of media coverage surrounding the Twitter account of Donald Trump and his publicized political statements.
 							</p><p>
 								In the US, gun control is a contentious topic. The occurrence of a mass shooting generally focuses the public eye on the issue, and generates discussion. The policy discussion is marked by a fierce battle between advocates for relatively unrestricted 2nd amendment rights and those who wish to see guns far more strictly controlled at the federal and state levels. I am going to look at tweets about gun control made before and after the October 1st Las Vegas shooting incident, the deadliest such incident in US history.
-							
-							<h2>HYPOTHESIS</h2>
-							<p>
-								We would expect that after a mass shooting, the tone of a conversation around gun control will shift. Both gun control advocates and gun rights advocates are both expected to ramp up their rhetoric following a flashpoint incident like the Las Vegas shooting.
 							</p>
-
 							<h2>PROCEDURE</h2>
 							<p>
 								With a sample of hashtags or search terms, you can collect all posts related to it for a span of time, and then subdivide that into time periods to determine the rise and fall of a viral trend. Further analysis of those time periods can help eludicate which users or networks were the most beneficial to the reach of those hashtags.
 							</p><p>
-								Using sentiment analysis and other text analysis tools, you can figure out what the prevailing thoughts about those topics are. Gauging emotional response can see whether those topics are trending because of a positive or a negative emotional response. In this case, I’ll be using the Syuzhet dictionary developed by the Nebraska Literary Lab to perform the sentiment analysis.
+								Using sentiment analysis and other text analysis tools, you can figure out what the prevailing thoughts about those topics are. Gauging emotional response can see whether those topics are trending because of a positive or a negative emotional response. In this case, I’ll be using the Bing method of sentiment analysis included in the 'Syuzhet' R package. More negative scores imply a more negative impression while more positive scores imply a more positive impression.
 							</p>
-
+							<h2>HYPOTHESIS</h2>
+							<p>
+								We would expect that after a mass shooting, the tone of a conversation around gun control will shift. Both gun control advocates and gun rights advocates are both expected to ramp up their rhetoric following a flashpoint incident like the Las Vegas shooting. 
+							</p>
+							<h2>DATA</h2>
+							<p>
+								The data I collected were 492593 tweets made between 10-1-2017 and 10-7-2017. They are attached in the Github repository attached to this GH pages site. They were assigned Bing sentiment values by the Syuzhet package for R. 
+							</p>
 							<h2>RESULTS</h2>
 							<p>
-								A t-test for difference of means returned a significant result with anαof .05 (p = .0001545, with 412.67 df). With a data set of nearly 500,000 tweets, of which one day’s worth were made in the day prior to the shooting, this suggests that the mean sentiment of the tweets before and after the shooting is different. 
+								A t-test for difference of means returned a significant result with an α of .05 (p = .00188, with 412.6 df). With a data set of nearly 500,000 tweets, of which one day’s worth were made in the day prior to the shooting, this suggests that the mean sentiment of the tweets before and after the shooting is different, and the sentiment of the tweets in the days following the first is higher. 
+
+								The Bing package is meant to harvest data about how people evaluate things, and in this case, their opinions of gun control were more positive following the shooting. 
 							</p>
 
 							<h2>DISCUSSION</h2>
 							<p>
-								The tenor of the conversation around gun control changes in the media when mass shootings occur in the United States, and it appears these incidents affect the views of citizens as well, as based on the collected tweets. 
+								The tenor of the conversation around gun control changes in the media when mass shootings occur in the United States, and it appears these incidents affect the views of citizens as well, as based on the collected tweets. In this case, the results suggest that tweets about gun control indicated a higher opinion of it in tweets made after the shooting.
 							</p><p>
 								Further analysis of social media discourse could find other similar patterns, or determine what other occurrences affect popular consensus and opinion on vital political disagreements from gun control to climate change. Policymakers might be able to identify germane times to focus Congress on relevant measures to deal with hot-button issues.
 							</p>
